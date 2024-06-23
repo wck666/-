@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 25 11:12:16 2020
-
-@author: myy
-"""
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -214,6 +208,6 @@ if __name__ == "__main__":
     result = pd.concat([result1,result2['price2']],axis=1)
     result['price'] = result.apply(lambda row: (row['price1'] * 0.3 + row['price2'] * 0.7),axis=1)
     result = result[['SaleID','price']]
-    submit_file_z_score = 'test6.csv'
+    submit_file_z_score = 'test.csv'
     result.to_csv(submit_file_z_score,encoding='utf8',index=0)
 
